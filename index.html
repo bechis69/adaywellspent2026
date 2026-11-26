@@ -1,0 +1,154 @@
+<div id="day-well-spent">
+
+<style>
+
+/* Optional Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400;500&display=swap');
+
+#day-well-spent {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('YOUR_BACKGROUND_IMAGE_URL') center center / cover no-repeat;
+    overflow: hidden;
+}
+
+#day-well-spent::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,0.15),
+            rgba(0,0,0,0.35)
+        );
+}
+
+#day-well-spent .content {
+    position: relative;
+    z-index: 2;
+    width: min(700px, 90%);
+    text-align: center;
+    color: white;
+    padding: 40px;
+}
+
+#day-well-spent h1 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 20px rgba(0,0,0,.45);
+}
+
+#day-well-spent .tagline {
+    font-family: 'Inter', sans-serif;
+    margin-top: 12px;
+    margin-bottom: 45px;
+    font-size: .9rem;
+    font-weight: 300;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    opacity: .82;
+}
+
+#day-well-spent .progress-shell {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+#day-well-spent .progress-track {
+    height: 10px;
+    background: rgba(255,255,255,.15);
+    border-radius: 999px;
+    overflow: hidden;
+    backdrop-filter: blur(6px);
+    box-shadow:
+        inset 0 0 10px rgba(0,0,0,.35),
+        0 0 30px rgba(0,140,255,.25);
+}
+
+#day-well-spent .progress-fill {
+    width: 35%;
+    height: 100%;
+    border-radius: 999px;
+    background: linear-gradient(
+        90deg,
+        #8be9ff,
+        #46a6ff,
+        #8b6dff
+    );
+    animation: drift 3s ease-in-out infinite;
+}
+
+@keyframes drift {
+    from {
+        transform: translateX(-120%);
+    }
+    to {
+        transform: translateX(320%);
+    }
+}
+
+#day-well-spent .status {
+    margin-top: 18px;
+    font-family: 'Inter', sans-serif;
+    font-size: .85rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: .75;
+}
+
+#day-well-spent .enter-button {
+    display: inline-block;
+    margin-top: 45px;
+    padding: 15px 38px;
+    text-decoration: none;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: .95rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border: 1px solid rgba(255,255,255,.35);
+    border-radius: 100px;
+    background: rgba(255,255,255,.08);
+    backdrop-filter: blur(10px);
+    transition: all .3s ease;
+}
+
+#day-well-spent .enter-button:hover {
+    background: rgba(255,255,255,.18);
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(255,255,255,.25);
+}
+
+</style>
+
+<div class="content">
+    <h1>A Day Well Spent</h1>
+
+    <div class="tagline">
+        A Photographic Essay
+    </div>
+
+    <div class="progress-shell">
+        <div class="progress-track">
+            <div class="progress-fill"></div>
+        </div>
+
+        <div class="status">
+            Preparing Presentation...
+        </div>
+    </div>
+
+    <a href="YOUR_PHOTO_ESSAY_URL" class="enter-button">
+        Enter
+    </a>
+</div>
+
+</div>
